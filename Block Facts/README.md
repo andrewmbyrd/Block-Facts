@@ -11,21 +11,21 @@ To run this example skill you need to do two things. The first is to deploy the 
 1. Go to the AWS Console and click on the Lambda link. Note: ensure you are in us-east or you won't be able to use Alexa with Lambda.
 2. Click on the Create a Lambda Function or Get Started Now button.
 3. Skip the blueprint
-4. Name the Lambda Function "Hello-World-Example-Skill".
+4. Name the Lambda Function "Space-Geek-Example-Skill".
 5. Select the runtime as Node.js
-5. Go to the the src directory, select all files and then create a zip file, make sure the zip file does not contain the src directory itself, otherwise Lambda function will not work.
-6. Select Code entry type as "Upload a .ZIP file" and then upload the .zip file to the Lambda
-7. Keep the Handler as index.handler (this refers to the main js file in the zip).
-8. Create a basic execution role and click create.
-9. Leave the Advanced settings as the defaults.
-10. Click "Next" and review the settings then click "Create Function"
-11. Click the "Event Sources" tab and select "Add event source"
-12. Set the Event Source type as Alexa Skills kit and Enable it now. Click Submit.
-13. Copy the ARN from the top right to be used later in the Alexa Skill Setup
+6. Go to the the src directory, select all files and then create a zip file, make sure the zip file does not contain the src directory itself, otherwise Lambda function will not work.
+7. Select Code entry type as "Upload a .ZIP file" and then upload the .zip file to the Lambda
+8. Keep the Handler as index.handler (this refers to the main js file in the zip).
+9. Create a basic execution role and click create.
+10. Leave the Advanced settings as the defaults.
+11. Click "Next" and review the settings then click "Create Function"
+12. Click the "Event Sources" tab and select "Add event source"
+13. Set the Event Source type as Alexa Skills kit and Enable it now. Click Submit.
+14. Copy the ARN from the top right to be used later in the Alexa Skill Setup.
 
 ### Alexa Skill Setup
 1. Go to the [Alexa Console](https://developer.amazon.com/edw/home.html) and click Add a New Skill.
-2. Set "HelloWorld" as the skill name and "hello world" as the invocation name, this is what is used to activate your skill. For example you would say: "Alexa, tell Hello World to say hello"
+2. Set "SpaceGeek" as the skill name and "space geek" as the invocation name, this is what is used to activate your skill. For example you would say: "Alexa, Ask space geek for a space fact."
 3. Select the Lambda ARN for the skill Endpoint and paste the ARN copied from above. Click Next.
 4. Copy the Intent Schema from the included IntentSchema.json.
 5. Copy the Sample Utterances from the included SampleUtterances.txt. Click Next.
@@ -36,5 +36,5 @@ To run this example skill you need to do two things. The first is to deploy the 
 9. Your skill is now saved and once you are finished testing you can continue to publish your skill.
 
 ## Examples
-    User: "Alexa, tell Hello World to say hello"
-    Alexa: "Hello World!"
+    User: "Alexa, ask Space Geek for a space fact"
+    Alexa: "Here's your space fact: ..."
