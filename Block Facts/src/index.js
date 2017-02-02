@@ -27,19 +27,31 @@ var APP_ID = undefined; //OPTIONAL: replace with "amzn1.echo-sdk-ams.app.[your-u
  * Array containing space facts.
  */
 var FACTS = [
-    "A year on Mercury is just 88 days long.",
-    "Despite being farther from the Sun, Venus experiences higher temperatures than Mercury.",
-    "Venus rotates counter-clockwise, possibly because of a collision in the past with an asteroid.",
-    "On Mars, the Sun appears about half the size as it does on Earth.",
-    "Earth is the only planet not named after a god.",
-    "Jupiter has the shortest day of all the planets.",
-    "The Milky Way galaxy will collide with the Andromeda Galaxy in about 5 billion years.",
-    "The Sun contains 99.86% of the mass in the Solar System.",
-    "The Sun is an almost perfect sphere.",
-    "A total solar eclipse can happen once every 1 to 2 years. This makes them a rare event.",
-    "Saturn radiates two and a half times more energy into space than it receives from the sun.",
-    "The temperature inside the Sun can reach 15 million degrees Celsius.",
-    "The Moon is moving approximately 3.8 cm away from our planet every year."
+    "Wheresoever you go, go with all your heart.",
+    "Everything has beauty, but not everyone sees it.",
+    "It does not matter how slowly you go as long as you do not stop.",
+    "He who knows all the answers has not been asked all the questions.",
+    "If you make a mistake and do not correct it, this is called a mistake.",
+    "Life is really simple, but we insist on making it complicated.",
+    "The man who moves a mountain begins by carrying away small stones",
+    "The funniest people are the saddest ones",
+    "Study the past if you would define the future.",
+    "Before you embark on a journey of revenge, dig two graves.",
+    "Wherever you go, go with all your heart.",
+    "To be wronged is nothing, unless you continue to remember it.",
+    "Silence is a true friend who never betrays.",
+    "When you see a good person, think of becoming like her/him. When you see someone not so good, reflect on your own weak points.",
+    "Attack the evil that is within yourself, rather than attacking the evil that is in others.",
+    "What the superior man seeks is in himself; what the small man seeks is in others.",
+    "It is not the failure of others to appreciate your abilities that should trouble you, but rather your failure to appreciate theirs.",
+    "The man of wisdom is never of two minds; the man of benevolence never worries; the man of courage is never afraid.",
+    "The gem cannot be polished without friction, nor man perfected without trials.",
+    "The hardest thing of all is to find a black cat in a dark room, especially if there is no cat.",
+    "Only the wisest and stupidest of men never change.",
+    "It is more shameful to distrust our friends than to be deceived by them.",
+    "If names be not correct, language is not in accordance with the truth of things",
+    "the beginning of wisdom is calling things by their proper name"
+    
 ];
 
 /**
@@ -85,7 +97,7 @@ Fact.prototype.intentHandlers = {
     },
 
     "AMAZON.HelpIntent": function (intent, session, response) {
-        response.ask("You can say tell me a space fact, or, you can say exit... What can I help you with?", "What can I help you with?");
+        response.ask("You can say tell me a quote, or, you can say exit... What can I help you with?", "What can I help you with?");
     },
 
     "AMAZON.StopIntent": function (intent, session, response) {
@@ -108,8 +120,8 @@ function handleNewFactRequest(response) {
     var randomFact = FACTS[factIndex];
 
     // Create speech output
-    var speechOutput = "Here's your fact: " + randomFact;
-    var cardTitle = "Your Fact";
+    var speechOutput = "Confucius said: " + randomFact;
+    var cardTitle = "Your Quote";
     response.tellWithCard(speechOutput, cardTitle, speechOutput);
 }
 
